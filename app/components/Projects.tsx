@@ -50,32 +50,32 @@ function Projects() {
               className="group bg-bg-card border border-border hover:border-border-strong transition-colors flex flex-col"
             >
               {/* Image */}
-              <div className="relative aspect-[16/10] overflow-hidden bg-bg-secondary">
+              <div className="relative aspect-2/2 overflow-hidden bg-bg-secondary">
                 <Image
                   src={project.imageUrl}
                   alt={project.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
 
               {/* Content */}
-              <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-lg font-semibold text-text-primary tracking-tight mb-2">
+              <div className="p-5 flex-1 flex flex-col">
+                <h3 className="text-lg font-semibold text-text-primary tracking-tight mb-1">
                   {project.title}
                 </h3>
 
-                <p className="text-sm text-text-secondary leading-relaxed mb-5 line-clamp-2 flex-1">
+                <p className="text-xs text-text-secondary leading-relaxed mb-4 line-clamp-2 flex-1">
                   {project.description}
                 </p>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-5">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.techStack.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-2.5 py-1 bg-bg-secondary text-text-tertiary text-xs font-medium tracking-wide"
+                      className="px-2 py-0.5 bg-bg-secondary text-text-tertiary text-[10px] font-medium tracking-wide"
                     >
                       {tech}
                     </span>
@@ -87,9 +87,9 @@ function Projects() {
                   href={project.previewUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-text-primary hover:text-accent transition-colors group/link"
+                  className="inline-flex items-center gap-1.5 text-xs font-medium text-text-primary hover:text-accent transition-colors group/link"
                 >
-                  <span>View Project</span>
+                  <span>View</span>
                   <ArrowUpRight className="w-4 h-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                 </a>
               </div>

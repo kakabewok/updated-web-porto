@@ -18,9 +18,9 @@ function Experience() {
           {experienceData.map((exp, index) => (
             <div
               key={index}
-              className="group border-t border-border py-10 md:py-14 last:border-b"
+              className="group border-t py-5 md:py-7 last:border-b border-border"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
                 {/* Left: Meta */}
                 <div className="lg:col-span-4">
                   <p className="text-sm text-text-tertiary tracking-wide mb-1">
@@ -64,7 +64,7 @@ function Experience() {
                   </div>
 
                   {/* Achievements */}
-                  <ul className="space-y-3">
+                  {/* <ul className="space-y-3">
                     {exp.achievements.map((achievement, idx) => (
                       <li key={idx} className="flex items-start gap-3">
                         <span className="shrink-0 w-1 h-1 rounded-full bg-text-tertiary mt-2.5" />
@@ -73,7 +73,7 @@ function Experience() {
                         </span>
                       </li>
                     ))}
-                  </ul>
+                  </ul> */}
                 </div>
               </div>
             </div>

@@ -7,7 +7,7 @@ const profileData = {
   photo:
     "https://res.cloudinary.com/dk16ng09n/image/upload/v1765988672/personal/web-porto/WhatsApp_Image_2025-12-17_at_11.17.56_PM_isskwf.jpg",
   intro:
-    "I'm a software developer focused on building scalable, performant web applications. With professional experience across frontend and backend, I work primarily with React, Next.js, Spring, and Laravel — delivering systems that are clean, dependable, and built for real users.",
+    "I'm a software developer with experience in building web applications using technologies like Spring Boot, Laravel, React, TypeScript, and Next.js. I enjoy solving problems and turning ideas into scalable and efficient systems through clean and maintainable code.",
   socials: {
     instagram: "https://www.instagram.com/_kkbwk/",
     linkedin: "https://www.linkedin.com/in/noprizal/",
@@ -77,22 +77,23 @@ const experienceData = [
     position: "Back End Developer",
     period: "2023 – Present",
     location: "South Tangerang, Indonesia",
-    techStack: ["Java", "Spring", "PostgreSQL", "MongoDB", "Docker"],
+    techStack: ["Java", "Spring Boot", "PostgreSQL", "Kubernetes", "Docker"],
     project:
-      "Payment Gateway Integration, Accounting System & Railway Gateway API",
+      "Payment Gateway Integration, Application Gateway, Accounting System & Microservices",
     achievements: [
-      "Processed and maintained millions of financial transactions with high reliability.",
-      "Improved transaction automation and reconciliation efficiency through optimized bank API integrations.",
-      "Delivered stable and compliant backend services for mission-critical financial systems.",
-      "Enabled seamless integration between external railway suppliers and internal railway services.",
-      "Improved system reliability through centralized gateway and standardized API contracts.",
+      "Designed, developed and maintained backend systems for seamless payment integrations with major banks (BRI, BCA, Permata Bank, BSI) and multiple payment gateways, ensuring secure and efficient transaction processing",
+      "Built and managed an application gateway to centralize and streamline communication between internal services and external payment providers",
+      "Managed and processed high-volume transactions, ensuring accuracy, security and reliability in production environments",
+      "Collaborated with banking institutions and internal stakeholders to ensure regulatory compliance and seamless system integration",
+      "Developed a comprehensive accounting system, allowing finance teams to generate journals, ledgers, and financial reports, while efficiently managing millions of transaction records with high data integrity",
+      "Integrated multiple payment gateways and PPOB services, including direct API integrations with PT KAI and PT VSI"
     ],
   },
   {
     company: "Calaraya Project",
     position: "Full Stack Developer",
     type: "Freelance",
-    period: "2024 – Present",
+    period: "2025 – Present",
     location: "Bogor, Indonesia",
     techStack: [
       "React",
@@ -102,13 +103,16 @@ const experienceData = [
       "Supabase",
       "Laravel",
       "PHP",
+      "Inertia",
+      "Cloudinary"
     ],
     project: "Websites & Digital Invitation",
     achievements: [
-      "Delivered multiple custom web and digital invitation projects with high client satisfaction.",
-      "Developed high-performance websites optimized for fast loading and responsive behavior.",
-      "Implemented image and media optimization strategies using Cloudinary.",
-      "Applied modern UI/UX principles to enhance readability and accessibility.",
+      "Developed and delivered custom web applications including digital invitation platforms, POS systems, product catalogs, and tailored business websites",
+      "Collaborated directly with clients to gather requirements and translate business needs into scalable technical solutions",
+      "Built responsive and user-friendly interfaces using modern frontend technologies",
+      "Designed and implemented backend systems to support dynamic content, transactions, and user management",
+      "Managed multiple projects simultaneously, ensuring timely delivery and client satisfaction"
     ],
   },
 ];
@@ -119,65 +123,74 @@ const portfolioProjects = [
     description:
       "A web application that provides website development and digital invitation services.",
     imageUrl:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1766645318/personal/web-porto/calaraya_kubdtf.png",
-    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
+      "https://res.cloudinary.com/dk16ng09n/image/upload/v1778486781/personal/web-porto/calaraya4_po9cad.png",
+    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
     previewUrl: "https://calaraya.vercel.app/",
+  },
+  {
+    title: "Calapos",
+    description:
+      "A web application for POS system with admin panel to manage inventory and transactions.",
+    imageUrl:
+      "https://res.cloudinary.com/dk16ng09n/image/upload/v1778410956/personal/web-porto/ss_pos_x6jwv7.png",
+    techStack: ["Laravel", "Livewire", "MySQL", "Tailwind CSS", "Flux UI"],
+    previewUrl: "https://calapos.shop/",
   },
   {
     title: "Qatia Rent",
     description:
       "A web application for renting clothes with an admin panel to manage inventory and transactions.",
     imageUrl:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1765989761/personal/web-porto/qatia_tiulwx.png",
-    techStack: ["Laravel", "React", "MySQL", "Tailwind CSS"],
+      "https://res.cloudinary.com/dk16ng09n/image/upload/v1778488709/personal/web-porto/qatia_enppdi.png",
+    techStack: ["Laravel", "React", "MySQL", "Tailwind CSS", "Inertia", "Typescript"],
     previewUrl: "https://qatiarent.com/",
   },
   {
     title: "E-Invitation Netflix",
-    description: "A modern e-invitation with a Netflix-inspired theme.",
+    description: "Auto Scroll - RSVP - Gallery - Custom Music - Story - Gift - Google Maps - Count Down",
     imageUrl:
       "https://res.cloudinary.com/dk16ng09n/image/upload/v1765992495/personal/web-porto/netflix_jmoiic.png",
-    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
+    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
     previewUrl: "https://calaraya.vercel.app/bella-syafik?id=OkfVBm",
   },
   {
     title: "E-Invitation Floral",
-    description: "A beautiful e-invitation with a floral-inspired theme.",
+    description: "Google Calendar - RSVP - Gallery - Custom Music - Gift - Google Maps",
     imageUrl:
       "https://res.cloudinary.com/dk16ng09n/image/upload/v1765992923/personal/web-porto/floral_lund0v.png",
-    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
+    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
     previewUrl: "https://calaraya.vercel.app/ilham-rosi?id=O9IPp",
   },
   {
     title: "E-Invitation Magazine",
-    description: "A stylish e-invitation with a magazine-inspired layout.",
+    description: "Google Calendar - RSVP - Gallery - Custom Music - Gift - Google Maps",
     imageUrl:
       "https://res.cloudinary.com/dk16ng09n/image/upload/v1765993975/personal/web-porto/magazine_yt4whr.png",
-    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
+    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
     previewUrl: "https://calaraya.vercel.app/rahma-jalal?id=Gku6G",
   },
   {
     title: "E-Invitation Maroon",
-    description: "An elegant e-invitation with a maroon-inspired theme.",
+    description: "Google Calendar - RSVP - Gallery - Custom Music - Gift - Google Maps",
     imageUrl:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1765994308/personal/web-porto/maroon_aohj7a.png",
-    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
+      "https://res.cloudinary.com/dk16ng09n/image/upload/v1772739451/personal/web-porto/regiya_jamf7h.png",
+    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
     previewUrl: "https://calaraya.vercel.app/reigiya-amar?id=1XsqW",
   },
   {
     title: "E-Invitation Stylish Bold",
-    description: "A modern e-invitation with a stylish bold-inspired theme.",
+    description: "Google Calendar - RSVP - Gallery - Custom Music - Gift - Google Maps",
     imageUrl:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1765994579/personal/web-porto/stylishbold_armbt3.png",
-    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
-    previewUrl: "https://calaraya.vercel.app/dinna-hudha?id=6yTQy",
+      "https://res.cloudinary.com/dk16ng09n/image/upload/v1776399437/personal/web-porto/marooncustom_jxuweq.png",
+    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
+    previewUrl: "https://calaraya.vercel.app/amry-erinka?id=bwtBEA",
   },
   {
     title: "E-Invitation Monochrome",
-    description: "A modern e-invitation with a monochrome-inspired theme.",
+    description: "Google Calendar - RSVP - Gallery - Custom Music - Gift - Google Maps",
     imageUrl:
       "https://res.cloudinary.com/dk16ng09n/image/upload/v1766313919/personal/web-porto/nadhar_rginzu.png",
-    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
+    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
     previewUrl: "https://calaraya.vercel.app/nadiah-haris?id=XyUaw",
   },
 ];
@@ -190,187 +203,38 @@ const contactInfo = {
 const certificatesData = [
   {
     id: 1,
-    title: "Rest API with Go & Docker",
-    issuing_organization: "BuildWithAngga",
-    issue_date: "2025-03-09",
-    expiration_date: null,
-    image_path:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770624102/personal/certifications/bwa-go_hwbkkm.jpg",
-    desc: "Learn how to build a REST API with Go and Docker.",
-    preview_url:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770624102/personal/certifications/bwa-go_hwbkkm.jpg",
-  },
-  {
-    id: 2,
-    title: "Basic Artificial Intelligence",
-    issuing_organization: "Dicoding",
-    issue_date: "2024-12-18",
-    expiration_date: "2027-12-18",
-    image_path:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770625831/personal/certifications/basic_ai_dicoding_jgfmec.webp",
-    desc: "Learn basics of Machine Learning, Deep Learning and Data Processing.",
-    preview_url: "https://www.dicoding.com/certificates/6RPNYEQQ9Z2M",
-  },
-  {
-    id: 3,
-    title: "Basic Structure Query Language",
-    issuing_organization: "Dicoding",
-    issue_date: "2024-10-08",
-    expiration_date: "2027-10-08",
-    image_path:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770629119/personal/certifications/sql_dicoding_h0xueb.png",
-    desc: "Learn the fundamentals of SQL, including data types, queries and database design.",
-    preview_url: "https://www.dicoding.com/certificates/N9ZOY6JGDPG5",
-  },
-  {
-    id: 4,
-    title: "Basic Data Science",
-    issuing_organization: "Dicoding",
-    issue_date: "2024-10-03",
-    expiration_date: "2027-10-03",
-    image_path:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770630856/personal/certifications/data_science_dicoding_mfbbja.png",
-    desc: "Learn the fundamentals of data science, machine learning, and data visualization.",
-    preview_url: "https://www.dicoding.com/certificates/QLZ9VKL5DX5D",
-  },
-  {
-    id: 5,
-    title: "Build Booking Car Wash with Laravel & Filament",
-    issuing_organization: "BuildWithAngga",
-    issue_date: "2024-09-16",
-    expiration_date: null,
-    image_path:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770633273/personal/certifications/car_wash_bwa_ddpgc8.jpg",
-    desc: "Learn how to build a booking car wash with Laravel, MySQL and Filament.",
-    preview_url:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770633273/personal/certifications/car_wash_bwa_ddpgc8.jpg",
-  },
-  {
-    id: 6,
-    title: "Build Company Profile with Laravel",
-    issuing_organization: "BuildWithAngga",
-    issue_date: "2024-08-26",
-    expiration_date: null,
-    image_path:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770636704/personal/certifications/laravel_compro_ho8jqq.jpg",
-    desc: "Learn how to build a company profile with Laravel.",
-    preview_url:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770636704/personal/certifications/laravel_compro_ho8jqq.jpg",
-  },
-  {
-    id: 7,
-    title: "Spring Boot for Beginner to Advanced",
-    issuing_organization: "Udemy",
-    issue_date: "2024-01-12",
-    expiration_date: null,
-    image_path:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770698868/personal/certifications/springboot_udemy_gmf0ei.png",
-    desc: "Learn how to build a Spring Boot application with Java.",
-    preview_url:
-      "https://www.udemy.com/certificate/UC-4ec29611-7070-4c60-93ec-bbe820073b26/",
-  },
-  {
-    id: 8,
-    title: "Learn to Create Flutter Applications",
-    issuing_organization: "Dicoding",
-    issue_date: "2023-11-17",
-    expiration_date: "2026-11-17",
-    image_path:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770716396/personal/certifications/flutter_dicoding_mr36fg.png",
-    desc: "Learn how to build a Flutter application for beginners.",
-    preview_url: "https://www.dicoding.com/certificates/JLX1WO7V2P72",
-  },
-  {
-    id: 9,
-    title: "Build Travel Website with Fullstack Javascript",
-    issuing_organization: "BuildWithAngga",
-    issue_date: "2023-11-12",
-    expiration_date: null,
-    image_path:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770716927/personal/certifications/fullstack_js_bwa_o9rjom.png",
-    desc: "Learn how to build a travel website with fullstack javascript.",
-    preview_url:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770716927/personal/certifications/fullstack_js_bwa_o9rjom.png",
-  },
-  {
-    id: 10,
-    title: "Java Foundations & Programming",
-    issuing_organization: "Digitalent Kominfo RI",
-    issue_date: "2023-09-05",
-    expiration_date: null,
-    image_path:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770717364/personal/certifications/fga_java_yr6wwz.png",
-    desc: "Learn the fundamentals of java and object-oriented programming.",
-    preview_url:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770717364/personal/certifications/fga_java_yr6wwz.png",
-  },
-  {
-    id: 11,
-    title: "Java Foundations",
-    issuing_organization: "Oracle",
-    issue_date: "2023-07-27",
-    expiration_date: null,
-    image_path:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770718350/personal/certifications/oracle_java_xvqgiv.png",
-    desc: "Learn about java and object-oriented programming.",
-    preview_url:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770718350/personal/certifications/oracle_java_xvqgiv.png",
-  },
-  {
-    id: 12,
-    title: "Learn Programming with Java",
-    issuing_organization: "Dicoding",
-    issue_date: "2023-06-05",
-    expiration_date: "2026-06-05",
-    image_path:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770718656/personal/certifications/dicoding_java_jtxobo.png",
-    desc: "Learn the fundamentals of java and object-oriented programming.",
-    preview_url: "https://www.dicoding.com/certificates/JMZV946LRPN9",
-  },
-  {
-    id: 13,
-    title: "Learn Frontend Tools Intermediate",
-    issuing_organization: "Dicoding",
-    issue_date: "2023-05-28",
-    expiration_date: "2026-05-28",
-    image_path:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770719099/personal/certifications/tools_fe_dicoding_knfsvk.png",
-    desc: "Learn about frontend tools intermediate.",
-    preview_url: "https://www.dicoding.com/certificates/MEPJVN6VQP3V",
-  },
-  {
-    id: 14,
-    title: "Introduction to Java Programming",
-    issuing_organization: "Sololearn",
-    issue_date: "2023-05-18",
-    expiration_date: null,
-    image_path:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770719904/personal/certifications/intro_to_java_solo_qhmkpm.png",
-    desc: "Learn about java programming.",
-    preview_url: "https://www.sololearn.com/en/certificates/CC-CQVXYM6M",
-  },
-  {
-    id: 15,
-    title: "Back End Expert with Javascript",
+    title: "Menjadi Back End Developer Expert",
     issuing_organization: "Dicoding",
     issue_date: "2023-04-19",
     expiration_date: "2026-04-19",
     image_path:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770720478/personal/certifications/be_expert_dicoding_fshxsx.png",
-    desc: "Learn about back end expert with javascript.",
-    preview_url: "https://www.dicoding.com/certificates/ERZRG487QPYV",
+      "https://res.cloudinary.com/dk16ng09n/image/upload/v1778477119/personal/certifications/be_expert_dicoding_mxcy48.png",
+    desc: "-",
+    preview_url:
+      "https://www.dicoding.com/certificates/ERZRG487QPYV",
   },
   {
-    id: 16,
-    title: "JavaScript (Basic)",
-    issuing_organization: "Hackerrank",
-    issue_date: "2023-04-01",
-    expiration_date: null,
+    id: 2,
+    title: "Menjadi Front End Developer Expert",
+    issuing_organization: "Dicoding",
+    issue_date: "2023-01-03",
+    expiration_date: "2026-01-03",
     image_path:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1770723084/personal/certifications/javascript_hackerrank_mf24ru.png",
-    desc: "Learn about javascript basic.",
-    preview_url: "https://www.hackerrank.com/certificates/93602e04e221",
+      "https://res.cloudinary.com/dk16ng09n/image/upload/v1778477078/personal/certifications/02._Dicoding_Front-End_Expert_OK-1_fwaimd.jpg",
+    desc: "-",
+    preview_url: "https://www.dicoding.com/certificates/RVZKKWOYEZD5",
   },
+  {
+    id: 3,
+    title: "Sertifikat Kompetensi Web Developer",
+    issuing_organization: "Badan Nasional Sertifikasi Profesi",
+    issue_date: "",
+    expiration_date: "",
+    image_path:
+      "https://res.cloudinary.com/dk16ng09n/image/upload/v1778477066/personal/certifications/01._BNSP_NOPRIZAL_OK-1_g49ol9.jpg",
+    desc: "-",
+    preview_url: "https://res.cloudinary.com/dk16ng09n/image/upload/v1778477066/personal/certifications/01._BNSP_NOPRIZAL_OK-1_g49ol9.jpg",
+  }
 ];
 
 export {

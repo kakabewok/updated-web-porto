@@ -90,7 +90,7 @@ function Hero() {
               <div className="font-mono text-xs space-y-1.5">
                 <p className="text-text-secondary"><span className="text-[#3b82f6]">const</span> <span className="text-[#eab308]">dev</span> = {'{'}</p>
                 <p className="text-text-primary pl-4">role: <span className="text-[#22c55e]">'Software Developer'</span>,</p>
-                <p className="text-text-primary pl-4">skills: [<span className="text-[#22c55e]">'React'</span>, <span className="text-[#22c55e]">'Next.js'</span>],</p>
+                <p className="text-text-primary pl-4">skills: [<span className="text-[#22c55e]">'Spring Boot'</span>, <span className="text-[#22c55e]">'Laravel'</span>, <span className="text-[#22c55e]">'React'</span>, <span className="text-[#22c55e]">'Next.js'</span>, <span className="text-[#22c55e]">'TypeScript'</span>],</p>
                 <p className="text-text-secondary">{'}'};</p>
               </div>
             </div>
@@ -140,7 +140,7 @@ function Hero() {
                 <p className="text-text-secondary"><span className="text-[#3b82f6]">const</span> <span className="text-[#eab308]">developer</span> = {'{'}</p>
                 <p className="text-text-primary pl-4">name: <span className="text-[#22c55e]">'{profileData.name}'</span>,</p>
                 <p className="text-text-primary pl-4">role: <span className="text-[#22c55e]">'Software Developer'</span>,</p>
-                <p className="text-text-primary pl-4">skills: [<span className="text-[#22c55e]">'React'</span>, <span className="text-[#22c55e]">'Next.js'</span>, <span className="text-[#22c55e]">'TypeScript'</span>],</p>
+                <p className="text-text-primary pl-4">skills: [<span className="text-[#22c55e]">'Spring Boot'</span>, <span className="text-[#22c55e]">'Laravel'</span>, <span className="text-[#22c55e]">'React'</span>, <span className="text-[#22c55e]">'Next.js'</span>, <span className="text-[#22c55e]">'TypeScript'</span>],</p>
                 <p className="text-text-primary pl-4">passion: <span className="text-[#22c55e]">'Building scalable web apps'</span></p>
                 <p className="text-text-secondary">{'}'};</p>
               </div>
@@ -173,7 +173,7 @@ function Hero() {
             </div>
             
             {/* Floating Decorative Element */}
-            <div className="absolute top-0 right-1/2 w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/10 to-transparent border border-accent/10 backdrop-blur-md transform rotate-12 -z-10 animate-bounce" style={{animationDuration: '3s'}} />
+            {/* <div className="border border-red-500 absolute top-0 right-1/2 w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/10 to-transparent border border-accent/10 backdrop-blur-md transform rotate-12 -z-10 animate-bounce" style={{animationDuration: '3s'}} /> */}
           </div>
         </div>
       </div>

@@ -1,37 +1,9 @@
-"use client";
-
-import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { certificatesData } from "../data/data";
 import Image from "next/image";
-import Pagination from "./Pagination";
-
-const ITEMS_PER_PAGE = 6;
 
 function Certificates() {
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const totalPages = Math.ceil(certificatesData.length / ITEMS_PER_PAGE);
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const currentCerts = certificatesData.slice(
-    startIndex,
-    startIndex + ITEMS_PER_PAGE
-  );
-
-  const formatDate = (dateString: string | null) => {
-    if (!dateString) return null;
-    const date = new Date(dateString);
-    return new Intl.DateTimeFormat("en-US", {
-      month: "short",
-      year: "numeric",
-    }).format(date);
-  };
-
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    const el = document.getElementById("certificates");
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
+  const currentCerts = certificatesData.slice(0, 3);
 
   return (
     <section id="certificates" className="py-24 md:py-32 bg-bg-secondary">
@@ -78,21 +50,6 @@ function Certificates() {
                   {cert.issuing_organization}
                 </p>
 
-                {/* Date */}
-                {cert.issue_date && (
-                  <p className="text-xs text-text-muted mb-4">
-                    Issued {formatDate(cert.issue_date)}
-                    {cert.expiration_date && (
-                      <span> · Expires {formatDate(cert.expiration_date)}</span>
-                    )}
-                  </p>
-                )}
-
-                {/* Description */}
-                <p className="text-sm text-text-secondary leading-relaxed mb-5 line-clamp-2 flex-1">
-                  {cert.desc}
-                </p>
-
                 {/* Link */}
                 <a
                   href={cert.preview_url}
@@ -108,12 +65,21 @@ function Certificates() {
           ))}
         </div>
 
-        {/* Pagination */}
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={handlePageChange}
-        />
+        {/* View All CTA */}
+        <div className="mt-12 flex flex-col items-center">
+          <p className="text-sm text-text-secondary mb-3">
+            +50 more certifications available on LinkedIn
+          </p>
+          <a
+            href="https://www.linkedin.com/in/noprizal"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-text-primary hover:text-accent transition-colors group/link"
+          >
+            <span>View All</span>
+            <span className="transition-transform group-hover/link:translate-x-1">&rarr;</span>
+          </a>
+        </div>
       </div>
     </section>
   );

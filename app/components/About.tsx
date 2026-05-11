@@ -32,17 +32,11 @@ function About() {
           {/* Main Bio Content */}
           <div className="lg:col-span-7">
             <div className="space-y-6 text-lg text-text-secondary leading-relaxed mb-10">
-              <p className="text-xl text-text-primary font-medium">{profileData.intro}</p>
-              <p>
-                Currently working as a Back End Developer at PT. Voltras
-                International, handling payment gateway integrations and
-                mission-critical financial systems. I thrive in environments 
-                where complex business logic meets high-performance requirements.
-              </p>
-              <p>
-                On the side, I build freelance web projects through Calaraya, 
-                where I focus on delivering end-to-end solutions with exceptional 
-                user experiences and robust backend architectures.
+              <p className="text-sm md:text-lg font-light tracking-wider">{profileData.intro}</p>
+              <p className="text-sm md:text-lg tracking-wider font-light">
+                Currently, I work on backend systems at a travel tech company, handling integrations with banks and external services to support smooth and secure payment processing. I'm also running freelance projects through Calaraya, where I develop custom web solutions such as digital invitation platforms, POS systems, product catalogs, and other business websites tailored to client needs.
+
+                I love learning new technologies and continuously improving my skills to build reliable, high-performance applications that provide real value to users.
               </p>
             </div>
 
@@ -62,16 +56,16 @@ function About() {
             {/* Quick Stats Grid */}
             <div className="grid grid-cols-2 gap-4">
               <div className="p-6 rounded-2xl bg-bg-primary border border-border/50 shadow-sm hover:shadow-md transition-all">
-                <p className="text-4xl font-bold text-text-primary mb-2">2+</p>
+                <p className="text-4xl font-bold text-text-primary mb-2">3+</p>
                 <p className="text-sm text-text-tertiary font-medium">Years Experience</p>
               </div>
               <div className="p-6 rounded-2xl bg-bg-primary border border-border/50 shadow-sm hover:shadow-md transition-all">
-                <p className="text-4xl font-bold text-text-primary mb-2">8+</p>
+                <p className="text-4xl font-bold text-text-primary mb-2">20+</p>
                 <p className="text-sm text-text-tertiary font-medium">Projects Delivered</p>
               </div>
               <div className="col-span-2 p-6 rounded-2xl bg-bg-primary border border-border/50 shadow-sm hover:shadow-md transition-all flex items-center justify-between">
                 <div>
-                  <p className="text-4xl font-bold text-text-primary mb-2">16</p>
+                  <p className="text-4xl font-bold text-text-primary mb-2">50+</p>
                   <p className="text-sm text-text-tertiary font-medium">Professional Certifications</p>
                 </div>
                 <div className="w-12 h-12 rounded-full bg-bg-secondary flex items-center justify-center">

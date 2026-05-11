@@ -58,8 +58,8 @@ function Navbar() {
               href="#hero"
               className="text-text-primary font-semibold tracking-tight text-lg hover:text-accent transition-colors"
             >
-              noprizal
-              <span className="text-accent">.</span>
+              Noprizal
+              <span className="text-accent"> /{">"}</span>
             </a>
 
             {/* Desktop Menu */}

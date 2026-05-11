@@ -82,7 +82,7 @@ function Portfolio() {
                           alt={tech}
                           width={14}
                           height={14}
-                          className="w-3 h-3"
+                          className="w-3 h-3 object-cover"
                           onError={(e) => {
                             const fallbackUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tech
                               .toLowerCase()
