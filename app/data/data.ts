@@ -2,12 +2,12 @@ import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 
 const profileData = {
   name: "Noprizal",
-  role: "Digital Invitation & Event Designer",
-  tagline: "Crafting distinctive, memorable digital experiences and invitations for your special moments.",
+  role: "Programmer",
+  tagline: "Crafting high-impact digital experiences that help people and businesses grow.",
   photo:
     "https://res.cloudinary.com/dk16ng09n/image/upload/v1765988672/personal/web-porto/WhatsApp_Image_2025-12-17_at_11.17.56_PM_isskwf.jpg",
   intro:
-    "I'm a designer and developer specializing in creating custom digital invitations and bespoke websites for events and businesses. I blend creative design with modern web technologies to deliver unique, interactive, and beautiful digital experiences.",
+    "Experienced Software Developer with a strong background in Spring Boot, Laravel, React, TypeScript, and Next.js. Passionate about building scalable and efficient web applications through clean code and analytical problem-solving. Experienced in developing high-performance systems and seamless user experiences across backend and frontend technologies. Continuously learning and adapting to new technologies to deliver innovative and reliable solutions.",
   socials: {
     instagram: "https://www.instagram.com/_kkbwk/",
     linkedin: "https://www.linkedin.com/in/noprizal/",
@@ -75,7 +75,7 @@ const experienceData = [
   {
     company: "PT. Voltras International",
     position: "Back End Developer",
-    period: "2023 – Present",
+    period: "2023 - Present",
     location: "South Tangerang, Indonesia",
     techStack: ["Java", "Spring Boot", "PostgreSQL", "Kubernetes", "Docker"],
     project:
@@ -93,7 +93,7 @@ const experienceData = [
     company: "Calaraya Project",
     position: "Full Stack Developer",
     type: "Freelance",
-    period: "2025 – Present",
+    period: "2025 - Present",
     location: "Bogor, Indonesia",
     techStack: [
       "React",
@@ -126,6 +126,7 @@ const portfolioProjects = [
       "https://res.cloudinary.com/dk16ng09n/image/upload/v1778486781/personal/web-porto/calaraya4_po9cad.png",
     techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
     previewUrl: "https://calaraya.vercel.app/",
+    year: "2024"
   },
   {
     title: "Calapos",
@@ -135,6 +136,7 @@ const portfolioProjects = [
       "https://res.cloudinary.com/dk16ng09n/image/upload/v1778410956/personal/web-porto/ss_pos_x6jwv7.png",
     techStack: ["Laravel", "Livewire", "MySQL", "Tailwind CSS", "Flux UI"],
     previewUrl: "https://calapos.shop/",
+    year: "2025"
   },
   {
     title: "Qatia Rent",
@@ -144,6 +146,7 @@ const portfolioProjects = [
       "https://res.cloudinary.com/dk16ng09n/image/upload/v1778488709/personal/web-porto/qatia_enppdi.png",
     techStack: ["Laravel", "React", "MySQL", "Tailwind CSS", "Inertia", "Typescript"],
     previewUrl: "https://qatiarent.com/",
+    year: "2025"
   },
   {
     title: "E-Invitation Netflix",
@@ -152,6 +155,7 @@ const portfolioProjects = [
       "https://res.cloudinary.com/dk16ng09n/image/upload/v1765992495/personal/web-porto/netflix_jmoiic.png",
     techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
     previewUrl: "https://calaraya.vercel.app/bella-syafik?id=OkfVBm",
+    year: "2025"
   },
   {
     title: "E-Invitation Floral",
@@ -160,6 +164,7 @@ const portfolioProjects = [
       "https://res.cloudinary.com/dk16ng09n/image/upload/v1765992923/personal/web-porto/floral_lund0v.png",
     techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
     previewUrl: "https://calaraya.vercel.app/ilham-rosi?id=O9IPp",
+    year: "2025"
   },
   {
     title: "E-Invitation Magazine",
@@ -168,6 +173,7 @@ const portfolioProjects = [
       "https://res.cloudinary.com/dk16ng09n/image/upload/v1765993975/personal/web-porto/magazine_yt4whr.png",
     techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
     previewUrl: "https://calaraya.vercel.app/rahma-jalal?id=Gku6G",
+    year: "2025"
   },
   {
     title: "E-Invitation Maroon",
@@ -176,6 +182,7 @@ const portfolioProjects = [
       "https://res.cloudinary.com/dk16ng09n/image/upload/v1772739451/personal/web-porto/regiya_jamf7h.png",
     techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
     previewUrl: "https://calaraya.vercel.app/reigiya-amar?id=1XsqW",
+    year: "2026"
   },
   {
     title: "E-Invitation Stylish Bold",
@@ -184,6 +191,7 @@ const portfolioProjects = [
       "https://res.cloudinary.com/dk16ng09n/image/upload/v1776399437/personal/web-porto/marooncustom_jxuweq.png",
     techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
     previewUrl: "https://calaraya.vercel.app/amry-erinka?id=bwtBEA",
+    year: "2026"
   },
   {
     title: "E-Invitation Monochrome",
@@ -192,6 +200,7 @@ const portfolioProjects = [
       "https://res.cloudinary.com/dk16ng09n/image/upload/v1766313919/personal/web-porto/nadhar_rginzu.png",
     techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
     previewUrl: "https://calaraya.vercel.app/nadiah-haris?id=XyUaw",
+    year: "2026"
   },
 ];
 

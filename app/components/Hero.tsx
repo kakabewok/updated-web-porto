@@ -5,10 +5,9 @@ import { Search, Mic, Camera } from "lucide-react";
 import { profileData } from "../data/data";
 
 const searchQueries = [
-  "Bespoke digital invitations...",
-  "Custom event websites...",
-  "UI/UX Design for creatives...",
-  "Modern web experiences..."
+  "Back End Developer...",
+  "Front End Developer...",
+  "Fullstack Developer...",
 ];
 
 function Hero() {
@@ -18,7 +17,7 @@ function Hero() {
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
-    
+
     if (isTyping) {
       if (displayText.length < searchQueries[queryIndex].length) {
         timeout = setTimeout(() => {
@@ -61,7 +60,7 @@ function Hero() {
       {/* Search Bar */}
       <div className="w-full max-w-2xl flex items-center bg-bg-primary border border-border hover:border-transparent hover:shadow-[0_1px_6px_rgba(32,33,36,0.28)] rounded-full px-5 py-3 md:py-4 transition-all duration-200 group">
         <Search className="w-5 h-5 text-text-muted mr-4" />
-        
+
         <div className="flex-1 flex items-center h-6 md:h-8">
           <span className="text-base md:text-lg text-text-primary">
             {displayText}
@@ -76,7 +75,7 @@ function Hero() {
       </div>
 
       {/* Action Buttons */}
-      <div className="flex flex-col sm:flex-row items-center gap-3 mt-8">
+      <div className="flex flex-row md:flex-col items-center gap-3 mt-8">
         <a
           href="#projects"
           className="px-6 py-2.5 bg-bg-secondary hover:bg-bg-tertiary text-text-primary text-sm font-medium rounded transition-colors border border-transparent hover:border-border hover:shadow-sm"
@@ -87,13 +86,13 @@ function Hero() {
           href="#contact"
           className="px-6 py-2.5 bg-bg-secondary hover:bg-bg-tertiary text-text-primary text-sm font-medium rounded transition-colors border border-transparent hover:border-border hover:shadow-sm"
         >
-          I'm Feeling Lucky
+          Contact Me
         </a>
       </div>
 
       {/* Subtle Tagline */}
       <p className="mt-12 text-sm text-text-secondary max-w-lg text-center leading-relaxed">
-        Designer & Developer based in Indonesia. <br className="hidden sm:block" />
+        Programmer based in Indonesia. <br className="hidden sm:block" />
         {profileData.tagline}
       </p>
     </section>
