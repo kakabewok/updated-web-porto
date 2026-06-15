@@ -1,38 +1,40 @@
 @import "tailwindcss";
 
 /* ============================================
-   DESIGN SYSTEM – Editorial Minimal Portfolio
+   DESIGN SYSTEM – Google-Inspired Minimalist
    ============================================ */
 
 @theme inline {
   /* --- Neutral Palette --- */
-  --color-bg-primary: #FAFAF9;
-  --color-bg-secondary: #F5F5F4;
-  --color-bg-tertiary: #EDEDED;
+  --color-bg-primary: #FFFFFF; /* Pure White */
+  --color-bg-secondary: #F8F9FA; /* Google Light Grey */
+  --color-bg-tertiary: #F1F3F4;
   --color-bg-card: #FFFFFF;
-  --color-bg-dark: #1A1A1A;
-  --color-bg-dark-secondary: #222222;
+  --color-bg-dark: #202124; /* Google Dark Grey */
 
   /* --- Text Colors --- */
-  --color-text-primary: #1A1A1A;
-  --color-text-secondary: #4A4A4A;
-  --color-text-tertiary: #787878;
-  --color-text-muted: #9E9E9E;
-  --color-text-inverse: #FAFAF9;
+  --color-text-primary: #202124;
+  --color-text-secondary: #5F6368;
+  --color-text-tertiary: #80868B;
+  --color-text-muted: #BDC1C6;
+  --color-text-inverse: #FFFFFF;
 
-  /* --- Accent (Deep Navy) --- */
-  --color-accent: #1E3A5F;
-  --color-accent-light: #2A4F7A;
-  --color-accent-subtle: #E8EDF3;
+  /* --- Accent Colors (Google Palette) --- */
+  --color-accent-blue: #1A73E8;
+  --color-accent-red: #EA4335;
+  --color-accent-yellow: #FBBC04;
+  --color-accent-green: #34A853;
+  --color-accent: #1A73E8; /* Default accent is blue */
 
   /* --- Border & Divider --- */
-  --color-border: #E5E5E5;
-  --color-border-strong: #D4D4D4;
-  --color-border-subtle: #F0F0F0;
+  --color-border: #DFE1E5; /* Standard Google Search border */
+  --color-border-subtle: #F1F3F4;
+  
+  /* --- Focus Rings --- */
+  --color-focus: rgba(26, 115, 232, 0.4);
 
   /* --- Font Families --- */
   --font-sans: var(--font-inter);
-  --font-mono: var(--font-jetbrains-mono);
 }
 
 /* ============================================
@@ -50,7 +52,7 @@ body {
   color: var(--color-text-primary);
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.6;
   letter-spacing: -0.01em;
 }
 
@@ -59,8 +61,8 @@ body {
    ============================================ */
 
 ::selection {
-  background-color: var(--color-accent);
-  color: var(--color-text-inverse);
+  background-color: #E8F0FE; /* Light Google Blue */
+  color: var(--color-accent-blue);
 }
 
 /* ============================================

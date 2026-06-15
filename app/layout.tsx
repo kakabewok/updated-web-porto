@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,20 +8,14 @@ const inter = Inter({
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title: "Noprizal — Software Developer",
+  title: "Noprizal — Event & Invitation Designer",
   description:
-    "Portfolio of Noprizal, a software developer specializing in modern web applications with React, Next.js, TypeScript, Java, and Spring.",
+    "Portfolio of Noprizal, a designer and developer specializing in distinctive digital invitations and web experiences.",
   openGraph: {
-    title: "Noprizal — Software Developer",
+    title: "Noprizal — Event & Invitation Designer",
     description:
-      "Portfolio of Noprizal, a software developer specializing in modern web applications.",
+      "Portfolio of Noprizal, a designer specializing in digital invitations and bespoke websites.",
   },
 };
 
@@ -33,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
+        className={`${inter.variable} font-sans antialiased`}
       >
         {children}
       </body>

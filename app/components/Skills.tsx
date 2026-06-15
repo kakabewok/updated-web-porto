@@ -1,43 +1,47 @@
+import { Code, Search } from "lucide-react";
 import { skillCategories } from "../data/data";
 
 function Skills() {
   return (
-    <section id="skills" className="py-24 md:py-32 bg-bg-secondary">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        {/* Section Label */}
-        <p className="text-sm tracking-widest text-text-tertiary uppercase mb-4">
-          Toolkit
-        </p>
-        <div className="w-12 h-px bg-border-strong mb-6" />
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold text-text-primary tracking-tight mb-4 md:mb-0">
-            Skills & Technologies
-          </h2>
-          <p className="text-text-secondary text-sm max-w-sm">
-            Tools and technologies I use to bring products to life.
-          </p>
+    <section id="skills" className="py-20 bg-bg-primary border-t border-border-subtle">
+      <div className="max-w-3xl mx-auto px-6 lg:px-8">
+        
+        {/* SERP Style Header / "Search" info */}
+        <div className="flex items-center gap-3 text-sm text-text-secondary mb-10 pb-6 border-b border-border-subtle">
+          <Search className="w-4 h-4" />
+          <p>Showing results for "<span className="font-semibold text-text-primary">skills and technologies</span>"</p>
         </div>
 
-        {/* Skill Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        {/* Skills Results List */}
+        <div className="space-y-12">
           {skillCategories.map((category, index) => (
-            <div key={index} className="space-y-6">
-              <h3 className="text-sm tracking-widest text-text-tertiary uppercase font-medium">
+            <div key={index} className="group">
+              
+              {/* Breadcrumb & Favicon */}
+              <div className="flex items-center gap-3 mb-1.5">
+                <div className="w-7 h-7 rounded-full bg-bg-secondary border border-border-subtle flex items-center justify-center overflow-hidden flex-shrink-0">
+                  <Code className="w-3.5 h-3.5 text-text-secondary" />
+                </div>
+                <div className="flex items-center text-sm text-text-secondary">
+                  <span className="truncate max-w-[200px] sm:max-w-none text-text-primary">
+                    Toolkit
+                  </span>
+                  <span className="mx-1.5 text-text-tertiary">›</span>
+                  <span className="text-text-tertiary">{category.title}</span>
+                </div>
+              </div>
+
+              {/* Title Link */}
+              <h3 className="text-xl sm:text-[22px] text-accent-blue font-medium mb-1 tracking-tight cursor-default">
                 {category.title}
               </h3>
-              <div className="space-y-0">
-                {category.skills.map((skill, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center justify-between py-3.5 border-b border-border group"
-                  >
-                    <span className="text-text-primary text-sm font-medium group-hover:text-accent transition-colors">
-                      {skill}
-                    </span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                ))}
-              </div>
+
+              {/* Snippet */}
+              <p className="text-[15px] text-text-secondary leading-relaxed max-w-2xl mt-1">
+                <span className="text-text-tertiary">Expertise — </span>
+                Proficient in {category.skills.join(", ")}. These tools are utilized to build scalable and high-performance digital solutions.
+              </p>
+
             </div>
           ))}
         </div>

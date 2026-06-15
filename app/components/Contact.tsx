@@ -1,66 +1,60 @@
-import { ArrowUpRight } from "lucide-react";
+import { Search, Mail, Link as LinkIcon } from "lucide-react";
 import { socialLinks } from "../data/data";
 
 function Contact() {
   return (
-    <section id="contact" className="py-24 md:py-32 bg-bg-primary">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        {/* Section Label */}
-        <p className="text-sm tracking-widest text-text-tertiary uppercase mb-4">
-          Contact
-        </p>
-        <div className="w-12 h-px bg-border-strong mb-12" />
+    <section id="contact" className="py-20 bg-bg-primary border-t border-border-subtle">
+      <div className="max-w-3xl mx-auto px-6 lg:px-8">
+        
+        {/* SERP Style Header / "Search" info */}
+        <div className="flex items-center gap-3 text-sm text-text-secondary mb-10 pb-6 border-b border-border-subtle">
+          <Search className="w-4 h-4" />
+          <p>Showing results for "<span className="font-semibold text-text-primary">contact information</span>"</p>
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-          {/* Left */}
-          <div className="lg:col-span-7">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-text-primary tracking-tight leading-tight mb-6">
-              Let&apos;s work
-              <br />
-              together.
-            </h2>
-            <p className="text-text-secondary leading-relaxed max-w-lg mb-10">
-              I&apos;m always open to discussing new projects, creative ideas,
-              or opportunities to be part of your vision. Feel free to reach
-              out.
-            </p>
-
-            {/* Primary CTA */}
-            <a
-              href="mailto:rizalnov667@gmail.com"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-text-primary text-text-inverse text-sm font-medium tracking-wide hover:bg-accent transition-colors"
-            >
-              Send Email
-              <ArrowUpRight className="w-4 h-4" />
-            </a>
-          </div>
-
-          {/* Right */}
-          <div className="lg:col-span-5 flex flex-col justify-end">
-            <div className="space-y-0">
-              <p className="text-xs tracking-widest text-text-tertiary uppercase mb-6">
-                Find me on
-              </p>
-              {socialLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target={link.label !== "Email" ? "_blank" : undefined}
-                  rel={
-                    link.label !== "Email"
-                      ? "noopener noreferrer"
-                      : undefined
-                  }
-                  className="group flex items-center justify-between py-4 border-b border-border hover:border-text-primary transition-colors"
-                >
-                  <span className="text-text-primary text-sm font-medium">
+        {/* Contact Results List */}
+        <div className="space-y-12">
+          {socialLinks.map((link, index) => (
+            <div key={index} className="group">
+              
+              {/* Breadcrumb & Favicon */}
+              <div className="flex items-center gap-3 mb-1.5">
+                <div className="w-7 h-7 rounded-full bg-bg-secondary border border-border-subtle flex items-center justify-center overflow-hidden flex-shrink-0">
+                  {link.label === "Email" ? (
+                    <Mail className="w-3.5 h-3.5 text-text-secondary" />
+                  ) : (
+                    <LinkIcon className="w-3.5 h-3.5 text-text-secondary" />
+                  )}
+                </div>
+                <div className="flex items-center text-sm text-text-secondary">
+                  <span className="truncate max-w-[200px] sm:max-w-none text-text-primary">
                     {link.label}
                   </span>
-                  <ArrowUpRight className="w-4 h-4 text-text-muted group-hover:text-text-primary transition-colors" />
-                </a>
-              ))}
+                  <span className="mx-1.5 text-text-tertiary">›</span>
+                  <span className="text-text-tertiary">Connect</span>
+                </div>
+              </div>
+
+              {/* Title Link */}
+              <a 
+                href={link.href}
+                target={link.label !== "Email" ? "_blank" : undefined}
+                rel={link.label !== "Email" ? "noopener noreferrer" : undefined}
+                className="inline-block"
+              >
+                <h3 className="text-xl sm:text-[22px] text-accent-blue font-medium group-hover:underline mb-1 tracking-tight">
+                  Reach out via {link.label}
+                </h3>
+              </a>
+
+              {/* Snippet */}
+              <p className="text-[15px] text-text-secondary leading-relaxed max-w-2xl mt-1">
+                <span className="text-text-tertiary">Direct Link — </span>
+                Click the link above to connect with me on {link.label}. I am currently accepting new projects and inquiries.
+              </p>
+
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -8,53 +8,86 @@ interface PaginationProps {
   onPageChange: (page: number) => void;
 }
 
+function generatePagination(currentPage: number, totalPages: number) {
+  if (totalPages <= 7) {
+    return Array.from({ length: totalPages }, (_, i) => i + 1);
+  }
+
+  if (currentPage <= 3) {
+    return [1, 2, 3, 4, '...', totalPages];
+  }
+
+  if (currentPage >= totalPages - 2) {
+    return [1, '...', totalPages - 3, totalPages - 2, totalPages - 1, totalPages];
+  }
+
+  return [1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages];
+}
+
 function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) {
   if (totalPages <= 1) return null;
 
+  const pages = generatePagination(currentPage, totalPages);
+
   return (
-    <div className="mt-14 flex justify-center items-center gap-2">
+    <div className="flex justify-center items-center gap-1 sm:gap-2">
       {/* Previous */}
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
         aria-label="Previous page"
-        className={`w-10 h-10 flex items-center justify-center border transition-colors ${
+        className={`px-3 py-2 flex items-center gap-1 transition-colors text-sm ${
           currentPage === 1
-            ? "border-border text-text-muted cursor-not-allowed"
-            : "border-border-strong text-text-primary hover:bg-bg-tertiary"
+            ? "text-text-muted cursor-not-allowed"
+            : "text-accent-blue hover:underline"
         }`}
       >
         <ChevronLeft className="w-4 h-4" />
+        <span className="hidden sm:inline">Previous</span>
       </button>
 
       {/* Page Numbers */}
-      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-        <button
-          key={page}
-          onClick={() => onPageChange(page)}
-          aria-label={`Page ${page}`}
-          aria-current={currentPage === page ? "page" : undefined}
-          className={`w-10 h-10 flex items-center justify-center text-sm font-medium transition-colors ${
-            currentPage === page
-              ? "bg-text-primary text-text-inverse"
-              : "border border-border text-text-secondary hover:border-border-strong hover:text-text-primary"
-          }`}
-        >
-          {page}
-        </button>
-      ))}
+      <div className="flex items-center">
+        {pages.map((page, index) => {
+          if (page === '...') {
+            return (
+              <span key={`ellipsis-${index}`} className="w-8 h-8 flex items-center justify-center text-sm text-text-secondary">
+                ...
+              </span>
+            );
+          }
+
+          const pageNumber = page as number;
+          return (
+            <button
+              key={pageNumber}
+              onClick={() => onPageChange(pageNumber)}
+              aria-label={`Page ${pageNumber}`}
+              aria-current={currentPage === pageNumber ? "page" : undefined}
+              className={`w-8 h-8 flex items-center justify-center text-sm transition-colors rounded-full ${
+                currentPage === pageNumber
+                  ? "text-text-primary font-bold pointer-events-none"
+                  : "text-accent-blue hover:underline"
+              }`}
+            >
+              {pageNumber}
+            </button>
+          );
+        })}
+      </div>
 
       {/* Next */}
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
         aria-label="Next page"
-        className={`w-10 h-10 flex items-center justify-center border transition-colors ${
+        className={`px-3 py-2 flex items-center gap-1 transition-colors text-sm ${
           currentPage === totalPages
-            ? "border-border text-text-muted cursor-not-allowed"
-            : "border-border-strong text-text-primary hover:bg-bg-tertiary"
+            ? "text-text-muted cursor-not-allowed"
+            : "text-accent-blue hover:underline"
         }`}
       >
+        <span className="hidden sm:inline">Next</span>
         <ChevronRight className="w-4 h-4" />
       </button>
     </div>

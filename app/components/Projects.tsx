@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowUpRight } from "lucide-react";
-import { portfolioProjects } from "../data/data";
 import Image from "next/image";
+import { Globe, Search } from "lucide-react";
+import { portfolioProjects } from "../data/data";
 import Pagination from "./Pagination";
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 3;
 
 function Projects() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -25,84 +25,79 @@ function Projects() {
   };
 
   return (
-    <section id="projects" className="py-24 md:py-32 bg-bg-secondary">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        {/* Section Label */}
-        <p className="text-sm tracking-widest text-text-tertiary uppercase mb-4">
-          Selected Work
-        </p>
-        <div className="w-12 h-px bg-border-strong mb-6" />
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-14">
-          <h2 className="text-3xl md:text-4xl font-semibold text-text-primary tracking-tight mb-4 md:mb-0">
-            Projects
-          </h2>
-          <p className="text-text-secondary text-sm max-w-md">
-            A collection of web applications and systems built with modern
-            technologies.
-          </p>
+    <section id="projects" className="py-20 bg-bg-primary border-t border-border-subtle">
+      <div className="max-w-3xl mx-auto px-6 lg:px-8">
+        
+        {/* SERP Style Header / "Search" info */}
+        <div className="flex items-center gap-3 text-sm text-text-secondary mb-10 pb-6 border-b border-border-subtle">
+          <Search className="w-4 h-4" />
+          <p>Showing results for "<span className="font-semibold text-text-primary">selected projects</span>"</p>
         </div>
 
-        {/* Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {currentProjects.map((project, index) => (
-            <article
-              key={startIndex + index}
-              className="group bg-bg-card border border-border hover:border-border-strong transition-colors flex flex-col"
-            >
-              {/* Image */}
-              <div className="relative aspect-2/2 overflow-hidden bg-bg-secondary">
-                <Image
-                  src={project.imageUrl}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-
-              {/* Content */}
-              <div className="p-5 flex-1 flex flex-col">
-                <h3 className="text-lg font-semibold text-text-primary tracking-tight mb-1">
-                  {project.title}
-                </h3>
-
-                <p className="text-xs text-text-secondary leading-relaxed mb-4 line-clamp-2 flex-1">
-                  {project.description}
-                </p>
-
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.techStack.map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="px-2 py-0.5 bg-bg-secondary text-text-tertiary text-[10px] font-medium tracking-wide"
-                    >
-                      {tech}
+        {/* Project Results List */}
+        <div className="space-y-12">
+          {currentProjects.map((project, index) => {
+            const displayUrl = project.previewUrl?.replace(/^https?:\/\//, '').replace(/\/$/, '') || 'project.local';
+            
+            return (
+              <div key={startIndex + index} className="group">
+                
+                {/* Breadcrumb & Favicon */}
+                <div className="flex items-center gap-3 mb-1.5">
+                  <div className="w-7 h-7 rounded-full bg-bg-secondary border border-border-subtle flex items-center justify-center overflow-hidden flex-shrink-0">
+                    {project.imageUrl ? (
+                      <Image 
+                        src={project.imageUrl} 
+                        alt="" 
+                        width={28} 
+                        height={28} 
+                        className="object-cover w-full h-full" 
+                      />
+                    ) : (
+                      <Globe className="w-3.5 h-3.5 text-text-secondary" />
+                    )}
+                  </div>
+                  <div className="flex items-center text-sm text-text-secondary">
+                    <span className="truncate max-w-[200px] sm:max-w-none text-text-primary">
+                      {displayUrl}
                     </span>
-                  ))}
+                    <span className="mx-1.5 text-text-tertiary">›</span>
+                    <span className="text-text-tertiary">{project.techStack[0]}</span>
+                  </div>
                 </div>
 
-                {/* Link */}
-                <a
-                  href={project.previewUrl}
-                  target="_blank"
+                {/* Title Link */}
+                <a 
+                  href={project.previewUrl} 
+                  target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-medium text-text-primary hover:text-accent transition-colors group/link"
+                  className="inline-block"
                 >
-                  <span>View</span>
-                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+                  <h3 className="text-xl sm:text-[22px] text-accent-blue font-medium group-hover:underline mb-1 tracking-tight">
+                    {project.title}
+                  </h3>
                 </a>
+
+                {/* Snippet */}
+                <p className="text-[15px] text-text-secondary leading-relaxed max-w-2xl mt-1">
+                  <span className="text-text-tertiary">2026 — </span>
+                  {project.description} Developed leveraging a modern stack including {project.techStack.join(", ")} to ensure high performance and seamless user experience.
+                </p>
+
               </div>
-            </article>
-          ))}
+            );
+          })}
         </div>
 
-        {/* Pagination */}
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={handlePageChange}
-        />
+        {/* Pagination (Google Style) */}
+        <div className="mt-16 pt-8 border-t border-border-subtle">
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+          />
+        </div>
+
       </div>
     </section>
   );

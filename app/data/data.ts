@@ -2,12 +2,12 @@ import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 
 const profileData = {
   name: "Noprizal",
-  role: "Software Developer",
-  tagline: "Building reliable, modern web applications.",
+  role: "Digital Invitation & Event Designer",
+  tagline: "Crafting distinctive, memorable digital experiences and invitations for your special moments.",
   photo:
     "https://res.cloudinary.com/dk16ng09n/image/upload/v1765988672/personal/web-porto/WhatsApp_Image_2025-12-17_at_11.17.56_PM_isskwf.jpg",
   intro:
-    "I'm a software developer with experience in building web applications using technologies like Spring Boot, Laravel, React, TypeScript, and Next.js. I enjoy solving problems and turning ideas into scalable and efficient systems through clean and maintainable code.",
+    "I'm a designer and developer specializing in creating custom digital invitations and bespoke websites for events and businesses. I blend creative design with modern web technologies to deliver unique, interactive, and beautiful digital experiences.",
   socials: {
     instagram: "https://www.instagram.com/_kkbwk/",
     linkedin: "https://www.linkedin.com/in/noprizal/",
