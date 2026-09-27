@@ -64,7 +64,7 @@ function About() {
 
             <p className="text-[15px] text-text-secondary leading-relaxed max-w-2xl mt-1">
               <span className="text-text-tertiary">Specialties - </span>
-              Specialized in building scalable enterprise backends using Java Spring Boot, Docker, and Kubernetes, while also crafting high-performing digital products for freelance clients. My stack includes Next.js, React, and Laravel to build custom POS systems, premium digital invitations, and modern web applications.
+              Specialized in building scalable enterprise backends using Java Spring Boot, Docker, and Kubernetes, alongside crafting high-performing digital products for freelance clients. My stack includes Next.js, React, and Laravel, which I use to build custom POS systems, payment integrations, financial web applications, portfolio websites, premium digital invitations, and modern web applications.
             </p>
           </div>
 

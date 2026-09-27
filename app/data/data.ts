@@ -7,7 +7,7 @@ const profileData = {
   photo:
     "https://res.cloudinary.com/dk16ng09n/image/upload/v1765988672/personal/web-porto/WhatsApp_Image_2025-12-17_at_11.17.56_PM_isskwf.jpg",
   intro:
-    "Experienced Software Developer with a strong background in Spring Boot, Laravel, React, TypeScript, and Next.js. Passionate about building scalable and efficient web applications through clean code and analytical problem-solving. Experienced in developing high-performance systems and seamless user experiences across backend and frontend technologies. Continuously learning and adapting to new technologies to deliver innovative and reliable solutions.",
+    "A Software Developer with a strong background in Spring Boot, Laravel, React, TypeScript, and Next.js. Passionate about building scalable and efficient web applications through clean code and analytical problem-solving. Skilled in developing high-performance systems and seamless user experiences across backend and frontend technologies. Continuously learning and adapting to new technologies to deliver innovative and reliable solutions.",
   socials: {
     instagram: "https://www.instagram.com/_kkbwk/",
     linkedin: "https://www.linkedin.com/in/noprizal/",
@@ -23,11 +23,11 @@ const skillCategories = [
   },
   {
     title: "Backend",
-    skills: ["Java", "Spring", "Node.js", "PHP", "Laravel"],
+    skills: ["Java", "Typescript", "Spring Boot", "Nodejs", "PHP", "Laravel"],
   },
   {
     title: "Database & Tools",
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Supabase", "Docker", "Git"],
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Supabase", "Docker", "Git", "Cloudinary", "Sanity"],
   },
 ];
 
@@ -94,7 +94,7 @@ const experienceData = [
     position: "Full Stack Developer",
     type: "Freelance",
     period: "2025 - Present",
-    location: "Bogor, Indonesia",
+    location: "Bogor & South Tangerang, Indonesia",
     techStack: [
       "React",
       "TypeScript",
@@ -104,7 +104,11 @@ const experienceData = [
       "Laravel",
       "PHP",
       "Inertia",
-      "Cloudinary"
+      "Cloudinary",
+      "MySQL",
+      "Sanity",
+      "Filament",
+      "Livewire"
     ],
     project: "Websites & Digital Invitation",
     achievements: [
@@ -134,7 +138,7 @@ const portfolioProjects = [
       "A web application for POS system with admin panel to manage inventory and transactions.",
     imageUrl:
       "https://res.cloudinary.com/dk16ng09n/image/upload/v1778410956/personal/web-porto/ss_pos_x6jwv7.png",
-    techStack: ["Laravel", "Livewire", "MySQL", "Tailwind CSS", "Flux UI"],
+    techStack: ["Laravel", "PHP", "Livewire", "MySQL", "Tailwind CSS", "Flux UI"],
     previewUrl: "https://calapos.shop/",
     year: "2025"
   },
@@ -148,58 +152,14 @@ const portfolioProjects = [
     previewUrl: "https://qatiarent.com/",
     year: "2025"
   },
+  
   {
-    title: "E-Invitation Netflix",
-    description: "Auto Scroll - RSVP - Gallery - Custom Music - Story - Gift - Google Maps - Count Down",
+    title: "Rangga Djoned - Creative Director Portfolio",
+    description: "Fashion Shows - Music Concerts - Award Ceremonies",
     imageUrl:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1765992495/personal/web-porto/netflix_jmoiic.png",
-    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
-    previewUrl: "https://calaraya.vercel.app/bella-syafik?id=OkfVBm",
-    year: "2025"
-  },
-  {
-    title: "E-Invitation Floral",
-    description: "Google Calendar - RSVP - Gallery - Custom Music - Gift - Google Maps",
-    imageUrl:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1765992923/personal/web-porto/floral_lund0v.png",
-    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
-    previewUrl: "https://calaraya.vercel.app/ilham-rosi?id=O9IPp",
-    year: "2025"
-  },
-  {
-    title: "E-Invitation Magazine",
-    description: "Google Calendar - RSVP - Gallery - Custom Music - Gift - Google Maps",
-    imageUrl:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1765993975/personal/web-porto/magazine_yt4whr.png",
-    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
-    previewUrl: "https://calaraya.vercel.app/rahma-jalal?id=Gku6G",
-    year: "2025"
-  },
-  {
-    title: "E-Invitation Maroon",
-    description: "Google Calendar - RSVP - Gallery - Custom Music - Gift - Google Maps",
-    imageUrl:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1772739451/personal/web-porto/regiya_jamf7h.png",
-    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
-    previewUrl: "https://calaraya.vercel.app/reigiya-amar?id=1XsqW",
-    year: "2026"
-  },
-  {
-    title: "E-Invitation Stylish Bold",
-    description: "Google Calendar - RSVP - Gallery - Custom Music - Gift - Google Maps",
-    imageUrl:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1776399437/personal/web-porto/marooncustom_jxuweq.png",
-    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
-    previewUrl: "https://calaraya.vercel.app/amry-erinka?id=bwtBEA",
-    year: "2026"
-  },
-  {
-    title: "E-Invitation Monochrome",
-    description: "Google Calendar - RSVP - Gallery - Custom Music - Gift - Google Maps",
-    imageUrl:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1766313919/personal/web-porto/nadhar_rginzu.png",
-    techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Cloudinary"],
-    previewUrl: "https://calaraya.vercel.app/nadiah-haris?id=XyUaw",
+      "https://res.cloudinary.com/dk16ng09n/image/upload/v1766313919/personal/web-porto/placeholder_placeholder.png", // Ganti link gambar nanti
+    techStack: ["Next.js", "TypeScript", "Sanity CMS", "Tailwind CSS", "Cloudinary"],
+    previewUrl: "https://www.ranggadjoned.com/",
     year: "2026"
   },
 ];

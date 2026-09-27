@@ -37,10 +37,17 @@ function Experience() {
               </h3>
 
               {/* Snippet */}
-              <p className="text-[15px] text-text-secondary leading-relaxed max-w-2xl mt-1">
+              {/* <p className="text-[15px] text-text-secondary leading-relaxed max-w-2xl mt-1">
                 <span className="text-text-tertiary">{exp.location} - </span>
                 {exp.project} Leveraging technologies such as {exp.techStack.join(", ")}.
-              </p>
+              </p> */}
+
+              {/* Snippet */}
+              <div className="mt-1 max-w-2xl text-[15px] text-text-secondary leading-relaxed space-y-1">
+                <p className="text-text-tertiary text-xs">{exp.location}</p>
+                <p><span className="font-medium text-text-primary">Key Projects:</span> {exp.project}</p>
+                <p><span className="font-medium text-text-primary">Tech Stacks:</span> {exp.techStack.join(", ")}</p>
+              </div>
 
             </div>
           ))}

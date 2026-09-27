@@ -5,9 +5,14 @@ import { Search, Mic, Camera } from "lucide-react";
 import { profileData } from "../data/data";
 
 const searchQueries = [
-  "Back End Developer...",
-  "Front End Developer...",
-  "Fullstack Developer...",
+  "Noprizal",
+  "Spring Boot",
+  "Laravel",
+  "Next.js",
+  "Tailwind",
+  "Inertia",
+  "Docker",
+  ""
 ];
 
 function Hero() {
@@ -75,24 +80,24 @@ function Hero() {
       </div>
 
       {/* Action Buttons */}
-      <div className="flex flex-row md:flex-col items-center gap-3 mt-8">
+      <div className="flex flex-row items-center gap-3 mt-8">
         <a
           href="#projects"
           className="px-6 py-2.5 bg-bg-secondary hover:bg-bg-tertiary text-text-primary text-sm font-medium rounded transition-colors border border-transparent hover:border-border hover:shadow-sm"
         >
-          View Portfolio
+          Projects
         </a>
         <a
           href="#contact"
           className="px-6 py-2.5 bg-bg-secondary hover:bg-bg-tertiary text-text-primary text-sm font-medium rounded transition-colors border border-transparent hover:border-border hover:shadow-sm"
         >
-          Contact Me
+          Contact
         </a>
       </div>
 
       {/* Subtle Tagline */}
       <p className="mt-12 text-sm text-text-secondary max-w-lg text-center leading-relaxed">
-        Programmer based in Indonesia. <br className="hidden sm:block" />
+        Programmer based in Bogor, Indonesia. <br className="hidden sm:block" />
         {profileData.tagline}
       </p>
     </section>

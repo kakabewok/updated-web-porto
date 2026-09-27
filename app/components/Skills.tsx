@@ -38,7 +38,7 @@ function Skills() {
 
               {/* Snippet */}
               <p className="text-[15px] text-text-secondary leading-relaxed max-w-2xl mt-1">
-                <span className="text-text-tertiary">Expertise - </span>
+                <span className="text-text-tertiary"></span>
                 {category.skills.join(", ")}.
               </p>
 
