@@ -157,7 +157,7 @@ const portfolioProjects = [
     title: "Rangga Djoned - Creative Director Portfolio",
     description: "Fashion Shows - Music Concerts - Award Ceremonies",
     imageUrl:
-      "https://res.cloudinary.com/dk16ng09n/image/upload/v1766313919/personal/web-porto/placeholder_placeholder.png", // Ganti link gambar nanti
+      "https://res.cloudinary.com/dk16ng09n/image/upload/v1790573908/personal/web-porto/djoned_mq8iiw.png", // Ganti link gambar nanti
     techStack: ["Next.js", "TypeScript", "Sanity CMS", "Tailwind CSS", "Cloudinary"],
     previewUrl: "https://www.ranggadjoned.com/",
     year: "2026"

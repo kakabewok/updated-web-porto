@@ -9,13 +9,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Noprizal — Event & Invitation Designer",
+  title: "Noprizal - Programmer",
   description:
-    "Portfolio of Noprizal, a designer and developer specializing in distinctive digital invitations and web experiences.",
+    "Portfolio of Noprizal.",
   openGraph: {
-    title: "Noprizal — Event & Invitation Designer",
+    title: "Noprizal - Programmer",
     description:
-      "Portfolio of Noprizal, a designer specializing in digital invitations and bespoke websites.",
+      "Portfolio of Noprizal.",
   },
 };
 
